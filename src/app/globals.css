@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+.container{
+  max-width: 1400px;
+}
+
+.textcolor {
+  background: linear-gradient(to right, #d53f3d, #e37240);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.customfont {
+  font-family: 'playfairDisplay';
+  font-weight: 500;
+}
+
+/* animated dot */
+
+
+.dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #eebd2b;
+  border-radius: 50%;
+  animation: bounce 1.5s infinite;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.dot:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-80px);
+  }
+}
