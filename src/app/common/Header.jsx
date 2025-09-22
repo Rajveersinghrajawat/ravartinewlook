@@ -28,7 +28,7 @@ export default function Header() {
 
         {/* menu header  */}
         <nav className="bg-white sticky top-0 z-50 shadow-md ">
-          <div className="container flex flex-wrap items-center justify-between lg:px-[40px] px-[20px] mx-auto  ">
+          <div className="container flex flex-wrap items-center justify-between px-[20px] mx-auto  ">
             <Link href={'/'}>
               <img src="images/logo.png" className="w-[100px] cursor-pointer" alt="logo" />
             </Link>
@@ -87,7 +87,7 @@ export default function Header() {
                 <CiHeart className="cursor-pointer p-1.5 text-3xl rounded hover:bg-gray-100" />
 
         
-                <AiOutlineUser className="cursor-pointer p-1.5 text-3xl rounded hover:bg-gray-100" />
+              <Link href={'login-register'}><AiOutlineUser className="cursor-pointer p-1.5 text-3xl rounded hover:bg-gray-100" /></Link>
 
        
                 <Link href="/cart" className="relative">

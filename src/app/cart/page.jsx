@@ -57,7 +57,7 @@ export default function Cart() {
 
                   <td className="p-3 py-[20px] flex items-center gap-2">
                     <form action="">
-                      <label for="qty1" class="sr-only">Quantity</label>
+                      <label htmlFor="qty" className="sr-only">Quantity</label>
                       <input 
                         type="number"
                         value={qty}
@@ -84,7 +84,7 @@ export default function Cart() {
 
             <div className="p-4">
               <p className="text-gray-700 mb-3">Enter your coupon code if you have one.</p>
-              <div class="flex flex-col sm:flex-row gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   type="text"
                   placeholder="Coupon code"
@@ -105,7 +105,7 @@ export default function Cart() {
             </div>
 
             <div className="p-4 space-y-3 text-gray-700">
-              <div class="flex justify-between border-b pb-2">
+              <div className="flex justify-between border-b pb-2">
                 <span>Subtotal</span>
                 <span>Rs. 2,500</span>
               </div>

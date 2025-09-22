@@ -163,7 +163,7 @@ export default function Product() {
 
                       <div className=' py-[5px] flex text-[#eebd2b] text-xl'><MdOutlineStar /><MdOutlineStar /><MdOutlineStar /><MdOutlineStar /><MdOutlineStar /></div>
                       <h1 className=' customfont text-xl text-[#432122] group-hover:text-[#c91d39] font-bold'>{items.heading}</h1>
-                      <p className='text-[#c9a29e] py-[10px]'>{items.title}</p>
+                      <p className='text-[#c9a29e] py-[10px]' style={{fontSize:14.5}}>{items.title}</p>
                       <div className='flex justify-between '>
                         <h1 className='text-[#c91d39] font-semibold text-xl flex items-center  '><FaIndianRupeeSign /> {items.price}
                           <span className='text-[#c9a29e] flex items-center text-[15px] px-[10px]'><FaIndianRupeeSign /><del>{items.delprice}</del></span></h1>
