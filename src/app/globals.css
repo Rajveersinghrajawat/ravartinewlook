@@ -61,3 +61,9 @@
     transform: translateY(-80px);
   }
 }
+
+.login button:hover, .register button:hover{
+  background: white;
+  color: #d53f3d;
+  border: 1px solid #d53f3d;
+}

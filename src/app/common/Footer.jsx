@@ -10,8 +10,8 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
     return (
         <>
-            <div className='max-w-[100%] lg:px-[40px] px-[20px] bg-[#661926] lg:py-[60px] py-[40px] border-b border-[#ceb6b9]'>
-                <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-[30px]'>
+            <div className='max-w-[100%]  bg-[#661926] lg:py-[60px] py-[40px] border-b border-[#ceb6b9]'>
+                <div className='container mx-auto px-5 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-[30px]'>
                     <div>
                         <ul>
                             <li className='customfont text-[#eebd2b] text-4xl font-extrabold'>Ravarti Culture</li>
@@ -89,10 +89,13 @@ export default function Footer() {
 
                 </div>
             </div>
-            <div className='max-w-[100%] py-[20px] bg-[#661926] lg:px-[40px] md:px-[20px] px-[10px] flex justify-between items-center'>
+
+            <section className='bg-[#661926]'>
+            <div className='container mx-auto py-[20px]  px-[10px] flex justify-between items-center'>
                 <p className='text-[#ceb6b9] font-semibold lg:text-[15px] text-[10px]'>© {currentYear} RAVARTI CULTURE. All rights reserved.</p>
                 <p className='text-[#ceb6b9] font-semibold lg:text-[15px] text-[10px]'>Made & Develop By CodeSavvyNest</p>
             </div>
+            </section>
         </>
     )
 }

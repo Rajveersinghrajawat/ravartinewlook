@@ -23,11 +23,11 @@ export default function Header() {
   return (
     <>
       {/* top header */}
-      <div >
+      <div className="sticky top-0 z-50">
         <div className='bg-gradient-to-r to-[#e77240] from-[#d53f3d]  text-white py-[5px] font-semibold text-center text-[15px]  '>FREE SHIPPING ON DOMESTIC ORDERS ABOVE RS 2,000.</div>
 
         {/* menu header  */}
-        <nav className="bg-white sticky top-0 z-50 shadow-md ">
+        <nav className="bg-white shadow-md ">
           <div className="container flex flex-wrap items-center justify-between px-[20px] mx-auto  ">
             <Link href={'/'}>
               <img src="images/logo.png" className="w-[100px] cursor-pointer" alt="logo" />
@@ -54,7 +54,7 @@ export default function Header() {
             <div className="hidden w-full md:block md:w-auto" >
               <ul className=" flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row lg:space-x-6 rtl:space-x-reverse md:mt-0 md:border-0 xl:text-[16px] md:text-[11px]">
                 <li>
-                  <Link href={'/product'} className="block py-2 px-1 text-[14px]   hover:text-[#d53f3d] " aria-current="page">PRODUCTS </Link>
+                  <Link href={'/category'} className="block py-2 px-1 text-[14px]   hover:text-[#d53f3d] " aria-current="page">PRODUCTS </Link>
                 </li>
                 <li>
                   <a href="#" className="block py-2 px-1 text-[14px] hover:text-[#d53f3d]">PURE POSHAK</a>
@@ -123,7 +123,7 @@ export default function Header() {
 
         {/* Drawer Menu Items */}
         <ul className="flex flex-col gap-4 p-4 text-[15.5px] font-semibold">
-          <li className="hover:text-[#d53f3d]">   <Link href={'/product'}>PRODUCTS  </Link></li>
+          <li className="hover:text-[#d53f3d]">   <Link href={'/category'}>PRODUCTS  </Link></li>
           <li><a href="#" className="hover:text-[#d53f3d]">PURE POSHAK</a></li>
           <li><a href="#" className="hover:text-[#d53f3d]">SEMI PURE POSHAK</a></li>
           <li><a href="#" className="hover:text-[#d53f3d]">STITCHED POSHAKS</a></li>

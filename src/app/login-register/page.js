@@ -11,7 +11,7 @@ export default function page() {
                         {/* Login */}
                         <div className="account_form border border-gray-200 p-6 rounded-md shadow-sm">
                             <h2 className="text-lg font-semibold mb-4">Login</h2>
-                            <form action="#">
+                            <form className='login' action="#">
                                 <p className="mb-4">
                                     <label className="block text-sm font-medium mb-1">
                                         Username or email <span className="text-red-500">*</span>
@@ -19,6 +19,7 @@ export default function page() {
                                     <input
                                         type="text"
                                         className="w-full border border-gray-300 px-3 py-2 rounded-md focus:ring focus:ring-blue-200 focus:outline-none"
+                                        required
                                     />
                                 </p>
                                 <p className="mb-4">
@@ -28,12 +29,13 @@ export default function page() {
                                     <input
                                         type="password"
                                         className="w-full border border-gray-300 px-3 py-2 rounded-md focus:ring focus:ring-blue-200 focus:outline-none"
+                                        required
                                     />
                                 </p>
                                 <div className="login_submit flex items-center justify-between">
-                                    <a href="#" className="text-sm text-blue-600 hover:underline">
+                                    {/* <a href="#" className="text-sm text-blue-600 hover:underline">
                                         Lost your password?
-                                    </a>
+                                    </a> */}
                                     <div className="flex items-center space-x-2">
                                         <input id="remember" type="checkbox" className="h-4 w-4" />
                                         <label htmlFor="remember" className="text-sm">Remember me</label>
@@ -41,7 +43,7 @@ export default function page() {
                                 </div>
                                 <button
                                     type="submit"
-                                    className="mt-4 w-full bg-[#c91d39] text-white py-2 rounded-md hover:bg-blue-700 transition"
+                                    className="mt-4 w-full bg-[#c91d39] text-white py-2 rounded-md transition"
                                 >
                                     Login
                                 </button>
@@ -51,7 +53,7 @@ export default function page() {
                         {/* Register */}
                         <div className="account_form border border-gray-200 p-6 rounded-md shadow-sm">
                             <h2 className="text-lg font-semibold mb-4">Register</h2>
-                            <form action="#">
+                            <form className='register' action="#">
                                  <p className="mb-4">
                                     <label className="block text-sm font-medium mb-1">
                                         Name <span className="text-red-500">*</span>
@@ -59,6 +61,7 @@ export default function page() {
                                     <input
                                         type="text"
                                         className="w-full border border-gray-300 px-3 py-2 rounded-md focus:ring focus:ring-blue-200 focus:outline-none"
+                                        required
                                     />
                                 </p>
                                  <p className="mb-4">
@@ -68,6 +71,7 @@ export default function page() {
                                     <input
                                         type="email"
                                         className="w-full border border-gray-300 px-3 py-2 rounded-md focus:ring focus:ring-blue-200 focus:outline-none"
+                                        required
                                     />
                                 </p>
                                 <p className="mb-4">
