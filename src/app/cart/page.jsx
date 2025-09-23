@@ -73,7 +73,7 @@ export default function Cart() {
         </div>
       </div>
   
-      <div className='container lg:px-[40px] px-[20px] mx-auto'>
+      <div className='container mb-6 lg:px-[40px] px-[20px] mx-auto'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           <div className="border border-gray-200 rounded-lg shadow-sm">
@@ -90,7 +90,7 @@ export default function Cart() {
                   placeholder="Coupon code"
                   className="flex-1 border rounded-md px-3 py-2 "
                 />
-                <button className="bg-gradient-to-r to-[#e77240] from-[#d53f3d] cursor-pointer text-white text-xl  px-5 py-2 hover:text-[#eebd2b] -md h">
+                <button className="bg-gradient-to-r to-[#e77240] from-[#d53f3d] cursor-pointer text-white text-l px-5 py-2 hover:text-[#eebd2b] -md h rounded-[10px]">
                   APPLY COUPON
                 </button>
               </div>
@@ -117,7 +117,7 @@ export default function Cart() {
                 <span>Total</span>
                 <span>Rs. 2,500</span>
               </div>
-              <button className="w-full bg-gradient-to-r to-[#e77240] from-[#d53f3d] hover:text-[#eebd2b] text-xl text-white py-3 rounded-md font-semibold hover:opacity-90">
+              <button className="w-full bg-gradient-to-r to-[#e77240] from-[#d53f3d] hover:text-[#eebd2b] text-l text-white py-3 rounded-md font-semibold hover:opacity-90">
                 Proceed To Checkout
               </button>
             </div>

@@ -6,6 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { FiShoppingBag } from "react-icons/fi";
 import { MdOutlineStar } from "react-icons/md";
 import { FaIndianRupeeSign } from "react-icons/fa6";
+import Link from 'next/link';
 
 
 const NEWARRIVALS = [
@@ -146,7 +147,9 @@ export default function Product() {
           <div className='w-[80%]  '>
             <div className='max-w-[100%] mx-auto grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-[40px] px-[10px]'>
               {NEWARRIVALS.map((items, index) => (
+                
                 <div key={index}>
+                  <Link href={'/product'}>
                   <div className='h-[500px] group shadow-2xl '>
                     <div className='  bg-center w-full h-[300px] p-[20px] rounded-t-lg shadow-[inset_0_-100px_50px_-40px_rgba(0,0,0,0.3)]   cursor-pointer  transition-all duration-500 ease-in-out group-hover:scale-105 
                  bg-[length:100%_100%] group-hover:bg-[length:110%_110%] flex flex-col justify-between  ' style={{ backgroundImage: `url(${items.image})` }}>
@@ -171,7 +174,7 @@ export default function Product() {
                       </div>
                     </div>
                   </div>
-
+                  </Link>
                 </div>
 
               ))}
