@@ -36,7 +36,7 @@ export default function ProductPage() {
       {/* Back Button */}
       <Link
         href="/products"
-        className="inline-flex items-center border px-4 py-2 rounded-md mb-6 hover:bg-gray-100"
+        className="inline-flex items-center border border-[#eeeaea] px-4 py-2 rounded-md mb-6 hover:bg-gray-100"
       >
         <svg
           className="h-4 w-4 mr-2"
@@ -54,7 +54,7 @@ export default function ProductPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         {/* Images */}
         <div className="space-y-4">
-          <div className="aspect-square overflow-hidden rounded-lg border">
+          <div className="aspect-square overflow-hidden rounded-lg">
             <img
               src={images[selectedImage]}
               alt="Product"
@@ -79,7 +79,7 @@ export default function ProductPage() {
         {/* Info */}
         <div className="space-y-6">
           <div>
-            <span className="inline-block mb-2 px-2 py-1 text-xs font-semibold rounded bg-red-600 text-white">
+            <span className="inline-block mb-2 px-2 py-1 text-xs font-semibold rounded-[20px] bg-red-600 text-white">
               NEW ARRIVAL
             </span>
             <h1 className="text-3xl font-bold mb-2">GULABBAAH POSHAK</h1>
@@ -115,7 +115,7 @@ export default function ProductPage() {
               {["S", "M", "L", "XL"].map((s) => (
                 <button
                   key={s}
-                  className="w-12 h-12 border rounded hover:bg-gray-100"
+                  className="w-12 h-12 border rounded hover:bg-[#c91d39] hover:text-white"
                 >
                   {s}
                 </button>
@@ -125,21 +125,13 @@ export default function ProductPage() {
 
           {/* Quantity */}
           <div>
-            <h3 className="font-semibold mb-3">Quantity</h3>
-            <div className="flex items-center gap-3">
-              <div className="flex items-center border rounded">
-                <button className="px-3 py-2">-</button>
-                <span className="px-4 py-2 font-medium">1</span>
-                <button className="px-3 py-2">+</button>
-              </div>
               <span className="text-sm text-gray-500">In Stock</span>
-            </div>
           </div>
 
           {/* Buttons */}
           <div className="flex gap-4">
-            <button className="flex-1 flex items-center justify-center gap-2 bg-red-600 text-white py-3 rounded hover:bg-red-700">
-              🛍 Add to Cart
+            <button className="flex-1 flex items-center justify-center gap-2 bg-[#c91d39] text-white py-3 rounded hover:bg-red-700">
+              Add to Cart
             </button>
             <button className="w-12 border rounded hover:bg-gray-100">♡</button>
           </div>
@@ -176,7 +168,7 @@ export default function ProductPage() {
             onClick={() => setActiveTab("care")}
             className={`py-2 font-medium ${
               activeTab === "care"
-                ? "border-b-2 border-red-600 text-red-600"
+                ? "border-b-2 border-[#c91d39] text-[#c91d39]"
                 : "text-gray-500"
             }`}
           >

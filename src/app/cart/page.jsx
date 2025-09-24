@@ -1,18 +1,25 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from "../common/Header"
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { CiHeart } from 'react-icons/ci';
+import { FiShoppingBag } from 'react-icons/fi';
+import { MdOutlineStar } from 'react-icons/md';
+import { FaIndianRupeeSign } from 'react-icons/fa6';
+import {NEWARRIVALS } from "../data";
 
 import Footer from "../common/Footer"
+import Link from 'next/link';
 
-const NEWARRIVALS = [
-  { id: 1, heading: "GULABBAAH POSHAK", image: "/images/image.png", title: "Natural crep poshak with intricate thread embroidery and traditional patterns", price: "5,999", delprice: "7,999" },
-  { id: 2, heading: "FULBAHAR POSHAK", image: "/images/image1.png", title: "Thread embroidery with zari and sequence work, perfect for special occasions", price: "3,800", delprice: "4,500" },
-  { id: 3, heading: "ROYAL MAROON POSHAK", image: "/images/image3.png", title: "Traditional royal maroon poshak with golden thread work and mirror embellishments", price: "4,200", delprice: "5,200" }
-]
+
 
 export default function Cart() {
     const [qty, setQty] = useState(1);
+    const [Product, SetProduct] = useState([]);
+
+  useEffect(() => {
+    SetProduct(NEWARRIVALS);
+  })
   return (
     <>
 
@@ -46,8 +53,8 @@ export default function Cart() {
                   </td>
 
                   <td className="p-3 text-center">
-                    <img src="demo.png"
-                      alt=""
+                    <img src="/images/image.png"
+                      alt="Posak"
                       className="w-12 h-12 object-cover rounded" />
                   </td>
 
@@ -117,14 +124,71 @@ export default function Cart() {
                 <span>Total</span>
                 <span>Rs. 2,500</span>
               </div>
+              <Link href={'/checkout'}>
               <button className="w-full bg-gradient-to-r to-[#e77240] from-[#d53f3d] hover:text-[#eebd2b] text-l text-white py-3 rounded-md font-semibold hover:opacity-90">
                 Proceed To Checkout
-              </button>
+              </button></Link>
             </div>
           </div>
 
         </div>
       </div>
+
+         {/* Best Selling */}
+      <section className='container mx-auto'>
+        <div className='my-[50px]'>
+
+          <h2 className='text-center text-4xl text-[#2c2122] customfont font-bold'>Best Selling Products</h2>
+
+          <div className='flex justify-center items-center'>
+            <p className='border border-[#e68569] w-[100px] text-center my-[20px]'></p>
+            <div className='bg-[#eebd2b] h-[12px] w-[12px] rounded-2xl mx-[20px]'></div>
+            <p className='border border-[#e68569] w-[100px] text-center my-[20px]'></p>
+          </div>
+
+          <p className='text-center text-[#af9bac] font-semibold'>Discover our latest collection of authentic Rajputi poshaks, crafted with traditional <br /> techniques and modern elegance</p>
+          <div className='max-w-[100%] mx-auto lg:px-[40px] grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-[40px] py-[40px] px-[10px]'>
+            {Product.map((v, i) => {
+              return (
+                <div key={v.id} className='group shadow-2xl '>
+                  <div className=' bg-center w-full h-[300px] p-[20px] rounded-t-lg shadow-[inset_0_-100px_50px_-40px_rgba(0,0,0,0.3)]   cursor-pointer  transition-all duration-500 ease-in-out group-hover:scale-105 
+        bg-[length:100%_100%] group-hover:bg-[length:110%_110%] flex flex-col justify-between' style={{ backgroundImage: `url(${v.image})` }}>
+                    <div className='flex justify-between h-60'>
+                      <div>
+                        <div className='bg-[#c91d39] text-white px-[10px] text-[15px] rounded-2xl font-semibold '>NEW</div>
+                        <div className='bg-[#f08b42]  px-[10px] text-[15px] rounded-2xl font-semibold my-[10px]'>FREE SHIPPING</div>
+                      </div>
+                      <div className='h-[40px] w-[40px] text-2xl rounded-3xl flex justify-center items-center bg-[#f08b42] hover:bg-[#c91d39] hover:text-white opacity-0 group-hover:opacity-100 '><CiHeart /></div>
+                    </div>
+                    <div className=' opacity-0 group-hover:opacity-100 flex justify-center items-center bg-[#c91d39] text-white rounded-2xl gap-[10px] py-[3px] '><FiShoppingBag />Add to Cart</div>
+                  </div>
+                  <div className=' bg-[#ffffff] h-[200px] transition-all duration-500 ease-in-out group-hover:scale-105     bg-[length:100%_100%] group-hover:bg-[length:110%_110%] rounded-b-lg p-[20px]'>
+
+                    <div className='py-[5px] flex text-[#eebd2b] text-xl'><MdOutlineStar /><MdOutlineStar /><MdOutlineStar /><MdOutlineStar /><MdOutlineStar /></div>
+                    <h2 className=' customfont text-xl text-[#432122] group-hover:text-[#c91d39] font-bold'>{v.name}</h2>
+                    <p className='text-[black] py-[10px]'>{v.title}</p>
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-[#c91d39] font-semibold text-xl flex items-center">
+                        <FaIndianRupeeSign />
+                        <span className="text-[#d92662] flex items-center text-[22px] px-[10px]">
+                          {v.sale}
+                          <del className="text-[#ccc] mx-2 text-[15px]">{v.price}</del>
+                        </span>
+                      </h3>
+                      <p className="text-[#f09263] text-[12px] font-semibold">FREE Shipping</p>
+                    </div>
+
+                  </div>
+                </div>
+              )
+            })}
+
+          </div>
+
+          <button className='text-white bg-gradient-to-r to-[#e77240] from-[#d53f3d] p-[10px_25px] rounded-3xl font-semibold flex justify-center items-center  mx-auto   cursor-pointer'>VIEW ALL PRODUCTS </button>
+
+        </div>
+      </section>
 
 </>
 
